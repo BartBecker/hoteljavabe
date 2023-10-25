@@ -6,15 +6,18 @@ public class LoginResponseDto extends ResponseDto {
 	
 	private String role;
 	
+	private String name;
+	
 	public LoginResponseDto(boolean succes) {
 		super(succes);
 	}
 	
-	public LoginResponseDto(String token, String role) {
+	public LoginResponseDto(String token, String role, String name) {
 		super(true, null);
 
 		this.token = token;
 		this.role = role;
+		this.name = name;
 	}
 
 	public String getToken() {
@@ -31,6 +34,14 @@ public class LoginResponseDto extends ResponseDto {
 	
 	public String getRole() {
 		return role;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	
+	public void setName(String name) {
+		this.name = name;
 	}
 	
 }

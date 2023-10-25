@@ -31,7 +31,7 @@ public class AccountEndpoint {
 		Account account = accountOptional.get();
 
 		// Geef een login response dto terug met de nieuwe token en de role van de account 
-		return new LoginResponseDto(account.getToken(), account.getRole());
+		return new LoginResponseDto(account.getToken(), account.getRole(), account.getVoornaam() + " " + account.getAchternaam());
 	}
 
 }

@@ -2,6 +2,7 @@ package nl.yc2309.javahotel.domein;
 
 import java.time.LocalDate;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,6 +14,7 @@ public class Review {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
+	@Column(length = 1000)
 	private String tekst;
 	private int waardering;
 	private LocalDate datum;
